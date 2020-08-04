@@ -1,1 +1,5 @@
 .env
+cookies.pkl
+accounts.txt
+chromedriver.exe
+debug.log
