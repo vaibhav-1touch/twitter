@@ -10,6 +10,17 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 search_keyword = "TechnicalGuruji"
 
+
+# Functions in order ->
+# get_cookies()             Load cookies from previous session with cookies.pkl file
+# save_cookies()            Save cookies for current session to cookies.pkl
+# get_account()             Get a single user handle from account.txt
+# login()                   Enter user credentials on login page
+# search_bar()              Searches the user handle and open main page
+# open_followers()          Click on followers button to open the followers scroll menu
+# write_names()             Get names from followers button and save it to account.txt
+
+
 load_dotenv()
 
 option = Options()
