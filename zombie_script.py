@@ -120,6 +120,7 @@ def random_follow():
     div_name_class = driver.find_elements_by_css_selector(".css-1dbjc4n.r-1wbh5a2.r-dnmrzs")
     div_followers_class = driver.find_elements_by_css_selector(".css-1dbjc4n.r-1n0xq6e.r-bcqeeo")
     count = 0
+    follow_count = random.randint(4, 7)
     accounts =  []
     for i in driver.find_elements_by_css_selector(div_class_followers_list):
         for j, k in zip(div_name_class, div_followers_class):
@@ -132,7 +133,7 @@ def random_follow():
                 if button.get_attribute('role') == "button":
                     for m in button.find_elements_by_tag_name('span'):
                         print(m.text)
-                        if m.text == "Follow" and count < 5 and random.random() > 0.7:
+                        if m.text == "Follow" and count < follow_count and random.random() > 0.7:
                             ActionChains(driver).move_to_element(m).click().perform()
                             time.sleep(random.randint(2,4) + random.random())
                             count += 1
